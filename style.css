@@ -161,13 +161,13 @@ main > aside > .nav-content{
     align-items: center;
     gap: 10px;
 }
-.blank-container > .blank-heading > div > p{
+.blank-container > .blank-heading > div > a{
     font: 900 18px "Roboto", sans-serif;
     color: var(--secondary_color);
     text-transform: capitalize;
 }
-.blank-container > .blank-heading > div > p:last-child{
-    color: var(--main_color);
+.blank-container > .blank-heading > div > a:nth-child(2){
+    color: var(--secondary_color);
 }
 .blank-container > .blank-heading > div > svg{
     width: 15px;
@@ -867,4 +867,189 @@ footer > section > .items {
     .blank-container > .blank-heading > div {
         display: none;
     }
+}
+
+
+/* Home page styles */
+/* Input fields */
+.first-input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+.first-input > div, .filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+.first-input > div{
+    width: 172px;
+}
+.first-input > div > label, .filter > label{
+    font: 400 14px "Roboto", sans-serif;
+    color: var(--main_color);
+}
+.first-input > div > input, .filter > input{
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 4px 2px rgba(117, 116, 116, 0.25);
+    width: 100%;
+    height: 33px;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: var(--main_color);
+}
+.filter{
+    width: 319px;
+    margin-top: 20px;
+}
+/* tables */
+.home-table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 17px;
+    position: relative;
+}
+.home-table > button{
+    background-color: var(--tertiary_color);
+    color: #fff;
+    padding: 5px;
+    font: 500 10px "Roboto", sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.home-table > table{
+    width: 100%;
+    border: 0;
+    border-collapse: collapse;
+    color: var(--main_color);
+    box-shadow: 0px 8px 16px 4px rgba(117, 116, 116, 0.25);
+}
+.home-body > tr > td, .history > table > tbody > tr > td{
+    padding: 5px 7px;
+    border-top: 1px solid var(--secondary_color);
+    position: relative;
+}
+.home-body > tr > td > button{
+    background-color: var(--main_color);
+    margin-top: 3px;
+}
+.home-body > tr > td:nth-last-child(1) > button{
+    background-color: var(--tertiary_color);
+}
+/* history */
+.home-table > .history{
+    display: none;
+    position: absolute;
+    top: 110px;
+    right: 10px;
+    width: 355px;
+    box-shadow: 0px 8px 16px 4px rgba(117, 116, 116, 0.25);
+    background-color: #fff;
+}
+.history > div{
+    width: 100%;
+    background-color: var(--tertiary_color);
+    color: #fff;
+    text-align: center;
+    padding: 4px;
+    font: 700 14px "Roboto", sans-serif;
+    position: relative;
+}
+.history > div > svg {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    fill: #fff;
+    background-color: transparent;
+    color: #fff;
+    width: 12px;
+    height: 12px;
+}
+.history > table{
+    font: 700 12px "Roboto", sans-serif;
+    width: 100%;
+}
+.history > table > tbody > tr:nth-child(3), .history > table > tbody > tr:nth-child(4){
+    opacity: 0.5;
+}
+.history > table >tbody > tr > td > button{
+    font: 500 10px "Roboto", sans-serif;
+    background-color: var(--main_color);
+    padding: 1px 3px;
+}
+.membership-btn{
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    font: 500 6px "Roboto", sans-serif;
+    width: fit-content;
+    color: #fff;
+    background-color: #A12B2B !important;
+}
+.gym {
+    display: none;
+    position: absolute;
+    top: -60px;
+    left: 5px;
+    width: 544px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 4px rgba(117, 116, 116, 0.25);
+    z-index:30;
+}
+.gym.show{
+    display: block;
+}
+.gym > div {
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    font: 700 14px "Roboto", sans-serif;
+}
+.gym> div:nth-child(1){
+    background-color: var(--tertiary_color);
+    color: #fff;
+}
+.gym > section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: flex-start;
+    padding: 10px 5px;
+    gap: 5px;
+}
+.gym > section > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 3px;
+    font: 400 14px "Roboto", sans-serif;
+}
+.gym > section > div > input, .gym > section > div > select{
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 4px 2px rgba(117, 116, 116, 0.25);
+    width: 100%;
+    height: 33px;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: var(--main_color);
+}
+.gym > button{
+    background-color: var(--tertiary_color);
+    outline: none;
+    border: none;
+    color: #fff;
+    margin: 5px 20px;
+    padding: 5px 8px;
+    cursor: pointer;
 }

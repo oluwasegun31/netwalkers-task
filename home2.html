@@ -212,286 +212,159 @@
               d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
             />
           </svg>
-          <p>Home Page</p>
+          <p>Drug Prescription Page</p>
           <div>
-            <p>Home</p>
+            <a href="./index.html">Home</a>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path
                 d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
               />
             </svg>
-            <a href="#">Page 1</a>
+            <a>Page 1</a>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path
                 d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
               />
             </svg>
-            <a href="./home2.html">Page 2</a>
+            <p href="./index.html">Page 2</p>
           </div>
         </div>
         <div class="select-options">
-          <button>Gym</button>
-          <button>Massage</button>
+          <button>Vital Signs</button>
+          <button>Presenting Complain</button>
+          <button>Diagnosis</button>
+          <button>Charges</button>
+          <button>Payments</button>
+          <button>Prescriptions</button>
+          <button>Medications</button>
         </div>
-        <div class="first-input">
-          <div>
-            <label for="startDate">Start Date</label>
-            <input type="text" name="startDate" id="startDate" />
-          </div>
-          <div>
-            <label for="endDate">End Date</label>
-            <input type="text" name="endDate" id="endDate" />
-          </div>
-          <div>
-            <label for="membership">Membership</label>
-            <input
-              type="text"
-              name="membership"
-              id="membership"
-              value="All plans"
-            />
-          </div>
-        </div>
-        <div class="filter">
-          <label for="filter">Filter</label>
-          <input
-            type="text"
-            name="filter"
-            id="filter"
-            placeholder="search by name or phone"
-          />
-        </div>
-        <div class="home-table">
-          <button>Enrol to Gym</button>
+        <div class="drug-table">
+          <h4>Prescribed Drugs</h4>
           <table>
             <tr>
               <th>S/N</th>
-              <th>Client Name/Phone</th>
-              <th>Date and Time registered</th>
-              <th>Current Plan & Validity</th>
-              <th>Date Registered & By</th>
-              <th>Status</th>
+              <th>Medicine Name</th>
+              <th>Medicine Class</th>
+              <th>Dose & Freq.</th>
+              <th>Duration</th>
+              <th>Instruction</th>
+              <th>Action</th>
             </tr>
-            <tbody class="home-body">
-              <tr>
-                <td>1</td>
-                <td>
-                  <p>Isaac Odinaka Franklin (M, 32)</p>
-                  <button>07013178793</button>
-                </td>
-                <td>
-                  <p>2024-10-14 9:45 PM</p>
-                  <button>Isaac Odinaka</button>
-                </td>
-                <td>
-                  <p>Deluxe</p>
-                  <button>2024-12-19 - 2024-12-19</button>
-                  <button class="membership-btn">
-                    view membership history
-                  </button>
-                </td>
-                <td>
-                  <p>2024-10-14 9:45 PM</p>
-                  <button>Isaac Odinaka</button>
-                </td>
-                <td>
-                  <button>More</button>
-                  <button>Physio Note</button>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>
-                  <p>2023-12-11 9:45AM</p>
-                  <button>IsaacOdinaka Franklin</button>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>
-                  <p>2023-12-11 9:45AM</p>
-                  <button>IsaacOdinaka Franklin</button>
-                </td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
+            <tr>
+              <td colspan="7" id="no-drugrow">No prescribed drug yet</td>
+            </tr>
+            <tbody id="tbody"></tbody>
           </table>
-          <section class="history">
-            <div>
-              <p>Membership History</p>
+          <div>
+            <button id="done-prescribing">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 384 512"
-                class="close-history"
+                width="15px"
+                height="15px"
+                fill="#fff"
               >
                 <path
-                  d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"
+                  d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
                 />
               </svg>
-            </div>
-            <table>
-              <tbody>
-                <tr>
-                  <td>S/N</td>
-                  <td>Date/Time</td>
-                  <td>Validity</td>
-                  <td>Trans. Code</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <p>2024-01-25 9:45pm</p>
-                    <button>Isaac Odinaka</button>
-                  </td>
-                  <td>
-                    <p>6 Months</p>
-                    <button>2024-10-10</button>
-                  </td>
-                  <td>NX152369</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <p>2024-01-25 9:45pm</p>
-                    <button>Isaac Odinaka</button>
-                  </td>
-                  <td>
-                    <p>6 Months</p>
-                  </td>
-                  <td>NX152369</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <p>2024-01-25 9:45pm</p>
-                    <button>Isaac Odinaka</button>
-                  </td>
-                  <td>
-                    <p>6 Months</p>
-                  </td>
-                  <td>NX152369</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section class="gym">
-            <div>
-              <p>Membership History</p>
-            </div>
+              <p>Done prescribing</p>
+            </button>
+          </div>
+          <div id="remark">
             <section>
-              <div>
-                <label for="fullName">Full Name</label>
-                <input type="text" name="fullName" id="fullName" />
-              </div>
-              <div>
-                <label for="gender">Gender</label>
-                <select name="gender" id="gender">
-                  <option value="">Select gender</option>
-                </select>
-              </div>
-              <div>
-                <label for="dob">Date of Birth</label>
-                <input
-                  type="text"
-                  name="dob"
-                  id="dob"
-                  placeholder="date of birth"
-                />
-              </div>
-              <div>
-                <label for="number">Phone Number</label>
+              <label for="remark">Remarks</label>
+              <input type="text" id="remark" name="remark" value="Nil" />
+              <button>Save Prescription</button>
+            </section>
+          </div>
+        </div>
+        <div class="add-drugs">
+          <h4>Prescribe A Drug</h4>
+          <section>
+            <div class="fields">
+              <label for="med-class">
+                <p>Medicine Class</p>
+                <div>List All Medicine</div>
+              </label>
+              <input
+                type="text"
+                name="med-class"
+                id="med-class"
+                placeholder="Search medicine class"
+                class="med-class"
+              />
+              <div class="spinner" id="spinner1"></div>
+              <section class="search-data" id="search-data1">
+                <div>
+                  <button class="close-search">Close</button>
+                </div>
+                <div class="result" id="result1"></div>
+              </section>
+            </div>
+            <div class="fields">
+              <label for="med-name">
+                <p>Medicine Name</p>
+                <div>Add A New Medicine</div>
+              </label>
+              <input
+                type="text"
+                name="med-name"
+                id="med-name"
+                placeholder="Search medicine class"
+                class="med-name"
+              />
+              <div class="spinner" id="spinner2"></div>
+              <section class="search-data" id="search-data2">
+                <div>
+                  <button class="close-search">Close</button>
+                </div>
+                <div class="result" id="result2"></div>
+              </section>
+            </div>
+            <div class="fields">
+              <label for="dose"> Dose </label>
+              <input
+                type="text"
+                name="dose"
+                id="dose"
+                placeholder="Enter strength"
+                class="med-name"
+              />
+            </div>
+            <div class="fields">
+              <label for="interval"> Interval </label>
+              <select name="interval" id="interval">
+                <option value="" disabled selected style="color: darkgrey">
+                  Select Frequency
+                </option>
+                <option value="Q2W">Q2W - Every other week</option>
+                <option value="Q3W">Q3W - Every other week</option>
+              </select>
+            </div>
+            <div class="fields">
+              <label for="interval"> Duration </label>
+              <div class="two-form">
                 <input
                   type="number"
-                  name="number"
-                  id="number"
-                  placeholder="Enter phone number"
+                  name="duration"
+                  id="duration1"
+                  placeholder="type"
                 />
-              </div>
-              <div>
-                <label for="address">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  id="address"
-                  placeholder="Enter full address"
-                />
-              </div>
-              <div>
-                <label for="address">How you found us</label>
-                <input
-                  type="text"
-                  name="find"
-                  id="find"
-                  placeholder="Enter how you found us"
-                />
-              </div>
-            </section>
-            <div>
-              <p>Emergency Contact Details</p>
-            </div>
-            <section>
-              <div>
-                <label for="address">Contact Name</label>
-                <input
-                  type="text"
-                  name="contact-name"
-                  id="contact-name"
-                  placeholder="Enter contact name"
-                />
-              </div>
-              <div>
-                <label for="address">Phone Number</label>
-                <input
-                  type="number"
-                  name="number2"
-                  id="number2"
-                  placeholder="Search by name or phone"
-                />
-              </div>
-              <div>
-                <label for="address">Relationship</label>
-                <input
-                  type="text"
-                  name="relationship"
-                  id="relationship"
-                  placeholder="Enter relationship"
-                />
-              </div>
-              <div>
-                <label for="address">How you found us</label>
-                <input
-                  type="text"
-                  name="find"
-                  id="find"
-                  placeholder="Enter how you found us"
-                />
-              </div>
-            </section>
-            <div>
-              <p>Payment Details</p>
-            </div>
-            <section>
-              <div>
-                <label for="amount">Paying amount</label>
-                <select name="amount" id="amount">
-                  <option value="">5000</option>
+                /
+                <select name="duration2" id="duration2">
+                  <option value="7">7</option>
+                  <option value="7">14</option>
+                  <option value="7">21</option>
+                  <option value="7">52</option>
                 </select>
               </div>
-              <div>
-                <label for="plane">Choose plane</label>
-                <select name="plane" id="plane">
-                  <option value="">Zenith Bank PLC</option>
-                </select>
-              </div>
-            </section>
-            <button>Save</button>
+            </div>
+            <div class="fields">
+              <label for="instruction"> Instructions </label>
+              <textarea name="instruction" id="instruction">Nil</textarea>
+            </div>
+            <button id="add-prescription">Add</button>
           </section>
         </div>
       </section>
@@ -514,6 +387,6 @@
         </div>
       </section>
     </footer>
-    <script src="./home.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
